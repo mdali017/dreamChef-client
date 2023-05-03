@@ -5,7 +5,7 @@ import {
   Bars3BottomRightIcon,
   XMarkIcon,
 } from '@heroicons/react/24/solid'
-import {  FaRebel  } from 'react-icons/fa';
+import { FaRebel } from 'react-icons/fa';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -14,14 +14,14 @@ const Header = () => {
       <div className='relative flex items-center justify-between'>
         {/* Logo Section */}
         <Link to='/' className='inline-flex items-center'>
-           <FaRebel className='h-6 w-6 text-blue-500'></FaRebel>
+          <FaRebel className='h-6 w-6 text-blue-500'></FaRebel>
           <span className='ml-2 text-xl font-bold tracking-wide text-gray-800'><span className='text-amber-400'>Dream</span>Chef</span>
         </Link>
 
         {/* Nav Items Section */}
         <ul className='items-center hidden space-x-8 lg:flex'>
           <li>
-            <NavLink to='/'className={({ isActive }) => (isActive ? 'active' : 'default')}>
+            <NavLink to='/' className={({ isActive }) => (isActive ? 'active' : 'default')}>
               Home
             </NavLink>
           </li>
@@ -39,6 +39,14 @@ const Header = () => {
               className={({ isActive }) => (isActive ? 'active' : 'default')}
             >
               Login
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to='/blog'
+              className={({ isActive }) => (isActive ? 'active' : 'default')}
+            >
+             Blog
             </NavLink>
           </li>
         </ul>
@@ -59,10 +67,8 @@ const Header = () => {
                 <div className='flex items-center justify-between mb-4'>
                   <div>
                     <Link to='/' className='inline-flex items-center'>
-                      <BoltIcon className='h-6 w-6 text-blue-500' />
-                      <span className='ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase'>
-                        nextPage
-                      </span>
+                      <FaRebel className='h-6 w-6 text-blue-500'></FaRebel>
+                      <span className='ml-2 text-xl font-bold tracking-wide text-gray-800'><span className='text-amber-400'>Dream</span>Chef</span>
                     </Link>
                   </div>
                   {/* Dropdown menu close button */}
