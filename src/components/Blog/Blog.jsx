@@ -23,18 +23,31 @@ const Blog = () => {
                 </div>
 
             </div>
-            <div className="card w-[50%] bg-primary text-primary-content mt-10">
-                <div className="card-body">
-                    <h2 className="text-center text-2xl font-extralight">How to validate React props using PropTypes??</h2>
-                    <div className='text-left'>
-                        <p className='mb-4'>1. Installing the prop-types Library and Basic Usage To install the prop-types library, we run: npm i prop-types ...</p>
-                        <p className='mb-4'>2. More Complex Prop Types In addition to validating arrays and primitive value prop types, we can also use prop-types to validate more complex types. Validate React Entity Types</p>
-                        <p className='mb-4'>3. Validate Enum Value</p>
-                        <p className='mb-4'>4. Validate Props That Can Be One of Multiple Types</p>
-                        <p className='mb-4'>5. Required Props</p>
+            <div className='grid grid-cols-2 gap-10'>
+                <div className="card w-full bg-primary text-primary-content mt-10">
+                    <div className="card-body">
+                        <h2 className="text-center text-2xl font-extralight">How to validate React props using PropTypes??</h2>
+                        <div className='text-left'>
+                            <p className='mb-4'>1. Installing the prop-types Library and Basic Usage To install the prop-types library, we run: npm i prop-types ...</p>
+                            <p className='mb-4'>2. More Complex Prop Types In addition to validating arrays and primitive value prop types, we can also use prop-types to validate more complex types. Validate React Entity Types</p>
+                            <p className='mb-4'>3. Validate Enum Value</p>
+                            <p className='mb-4'>4. Validate Props That Can Be One of Multiple Types</p>
+                            <p className='mb-4'>5. Required Props</p>
+                        </div>
+
                     </div>
-                    <div className="card-actions justify-end">
-                        <button className="btn">Buy Now</button>
+                </div>
+                <div className="card w-full bg-primary text-primary-content mt-10">
+                    <div className="card-body">
+                        <h2 className="text-center text-2xl font-extralight">What is a custom hook, and why will you create a custom hook?</h2>
+                        <div className='text-left'>
+                            <p className='mb-4'>Custom React JS hooks offer reusability as when a custom hook is created, it can be reused easily, which makes the code cleaner and reduces the time to write the code. It also enhances the rendering speed of the code as a custom hook does not need to be rendered again and again while rendering the whole code.</p>
+                            <p className='mb-4'>2. More Complex Prop Types In addition to validating arrays and primitive value prop types, we can also use prop-types to validate more complex types. Validate React Entity Types</p>
+                            <p className='mb-4'>3. Validate Enum Value</p>
+                            <p className='mb-4'>4. Validate Props That Can Be One of Multiple Types</p>
+                            <p className='mb-4'>5. Required Props</p>
+                        </div>
+
                     </div>
                 </div>
             </div>
