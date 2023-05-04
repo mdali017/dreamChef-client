@@ -21,14 +21,14 @@ const Header = () => {
         {/* Nav Items Section */}
         <ul className='items-center hidden space-x-8 lg:flex'>
           <li>
-            <NavLink to='/' className={({ isActive }) => (isActive ? 'active' : 'default')}>
+            <NavLink to='/' className={({ isActive }) => (isActive ? 'text-blue-800 font-semibold' : 'default')}>
               Home
             </NavLink>
           </li>
           <li>
             <NavLink
               to='/register'
-              className={({ isActive }) => (isActive ? 'active' : 'default')}
+              className={({ isActive }) => (isActive ? 'text-blue-800 font-semibold' : 'default')}
             >
               Register
             </NavLink>
@@ -36,7 +36,7 @@ const Header = () => {
           <li>
             <NavLink
               to='/login'
-              className={({ isActive }) => (isActive ? 'active' : 'default')}
+              className={({ isActive }) => (isActive ? 'text-blue-800 font-semibold' : 'default')}
             >
               Login
             </NavLink>
@@ -44,9 +44,9 @@ const Header = () => {
           <li>
             <NavLink
               to='/blog'
-              className={({ isActive }) => (isActive ? 'active' : 'default')}
+              className={({ isActive }) => (isActive ? 'text-blue-800 font-semibold' : 'default')}
             >
-             Blog
+              Blog
             </NavLink>
           </li>
         </ul>
@@ -86,17 +86,33 @@ const Header = () => {
                 <nav>
                   <ul className='space-y-4'>
                     <li>
-                      <Link to='/' className='default'>
+                      <NavLink to='/' className={({ isActive }) => (isActive ? 'text-blue-800 font-semibold' : 'default')}>
                         Home
-                      </Link>
+                      </NavLink>
                     </li>
                     <li>
-                      <Link
-                        to='/books'
-                        className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-blue-400'
+                      <NavLink
+                        to='/register'
+                        className={({ isActive }) => (isActive ? 'text-blue-800 font-semibold' : 'default')}
                       >
-                        Books
-                      </Link>
+                        Register
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink
+                        to='/login'
+                        className={({ isActive }) => (isActive ? 'text-blue-800 font-semibold' : 'default')}
+                      >
+                        Login
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink
+                        to='/blog'
+                        className={({ isActive }) => (isActive ? 'text-blue-800 font-semibold' : 'default')}
+                      >
+                        Blog
+                      </NavLink>
                     </li>
                     <li>
                       <Link
