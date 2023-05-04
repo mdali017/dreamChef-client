@@ -1,8 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const AllChefInfo = ({allChef}) => {
-    console.log(allChef)
-    const {ChefName, ChefPicture} = allChef;
+    // console.log(allChef)
+    const {id, ChefName, ChefPicture, YearsOfExperiance, NumbersOfRecipes, Likes} = allChef;
     return (
         <div >
             <div className="card w-96 bg-base-100 shadow-xl">
@@ -11,9 +12,13 @@ const AllChefInfo = ({allChef}) => {
                 </figure>
                 <div className="card-body items-center text-center">
                     <h2 className="card-title">{ChefName}</h2>
-                    <p>If a dog chews shoes whose shoes does he choose?</p>
+                    <p>{YearsOfExperiance}</p>
+                    <div>
+                        <p>Numbers of Recipes: {NumbersOfRecipes}</p>
+                        <p>Likes: {Likes}</p>
+                    </div>
                     <div className="card-actions">
-                        <button className="btn btn-primary">View Details</button>
+                        <Link to={`/chefDeails/${id}`} className="btn btn-primary"> View Recipes Button</Link>
                     </div>
                 </div>
             </div>

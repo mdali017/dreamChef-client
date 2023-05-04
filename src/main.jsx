@@ -13,6 +13,7 @@ import Register from './components/Register/Register.jsx';
 import ErrorPage from './components/ErrorPage/ErrorPage.jsx';
 import AuthProvider from './AuthProvider/AuthProvider.jsx';
 import Blog from './components/Blog/Blog.jsx';
+import ChefDetails from './components/ChefDetails/ChefDetails.jsx';
 
 const router = createBrowserRouter([
   {
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
       {
         path: '/blog',
         element: <Blog></Blog>
+      },
+      {
+        path: '/chefDetails/:id',
+        element: <ChefDetails></ChefDetails>
       }
     ]
   },
