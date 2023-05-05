@@ -2,11 +2,11 @@ import React from 'react';
 
 const Blog = () => {
     return (
-        <div>
+        <div className=''>
             <div className="card w-full bg-primary text-primary-content mt-24">
                 <div className="card-body">
                     <h2 className="text-center text-3xl font-extralight"> *** Tell us the differences between uncontrolled and controlled components.</h2>
-                    <div className='grid grid-cols-2 gap-20'>
+                    <div className='grid md:grid-cols-2 gap-20'>
                         <div className='text-left'>
                             <h4 className='mt-5 mb-5 text-xl font-bold'>Controlled Components</h4>
                             <p className='mb-4'>1. A Controlled Component is one that takes its current value through props and notifies changes through callbacks like onChange. A parent component "controls" it by handling the callback and managing its own state and passing the new values as props to the controlled component. You could also call this a dumb component.</p>
@@ -26,7 +26,7 @@ const Blog = () => {
             <div className="card w-full bg-primary text-primary-content mt-24">
                 <div className="card-body">
                     <h2 className="text-center text-3xl font-extralight"> *** Tell us the difference between nodejs and express js.</h2>
-                    <div className='grid grid-cols-2 gap-20'>
+                    <div className='grid md:grid-cols-2 gap-20'>
                         <div className='text-left'>
                             <h4 className='mt-5 mb-5 text-xl font-bold'>Node .js</h4>
                             <p className='mb-4'>1. Node.js is a JavaScript runtime built on Chrome’s V8 JavaScript engine. It is used to run JavaScript in ways similar to how the browser runs JavaScript but on servers.</p>
@@ -43,7 +43,7 @@ const Blog = () => {
                 </div>
 
             </div>
-            <div className='grid grid-cols-2 gap-10 mb-24'>
+            <div className='grid md:grid-cols-2 gap-10 mb-24'>
                 <div className="card w-full bg-primary text-primary-content mt-10 ">
                     <div className="card-body">
                         <h2 className="text-center text-2xl font-extralight">How to validate React props using PropTypes??</h2>

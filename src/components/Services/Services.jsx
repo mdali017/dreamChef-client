@@ -7,8 +7,8 @@ const Services = () => {
         <div>
             <h1 className='mt-24 mb-5 text-5xl font-bold'>Our Services</h1>
             <h4 className='text-xl mb-10'>It is a long established fact that a reader will be distracted by the readable <br /> content of a page when looking at its layout.</h4>
-            <div className='grid grid-cols-3 mb-24'>
-                <div className="card w-96 bg-base-100 shadow-xl">
+            <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-10 mr-10  mb-24'>
+                <div className="card  bg-base-100 shadow  mb-10">
                     <figure className="px-10 pt-10">
                     <FaCoffee className='text-6xl'></FaCoffee>
                     </figure>
@@ -17,7 +17,7 @@ const Services = () => {
                         <p>It is a long established fact that a reader will be distracted by the readable content.</p> 
                     </div>
                 </div>
-                <div className="card w-96 bg-base-100 shadow-xl">
+                <div className="card  bg-base-100 shadow mb-10">
                     <figure className="px-10 pt-10">
                     {/* <BiRestaurant></BiRestaurant> */}
                     <FaLemon className='text-6xl'></FaLemon>
@@ -27,7 +27,7 @@ const Services = () => {
                         <p>It is a long established fact that a reader will be distracted by the readable content.</p> 
                     </div>
                 </div>
-                <div className="card w-96 bg-base-100 shadow-xl">
+                <div className="card  bg-base-100 shadow mb-10">
                     <figure className="px-10 pt-10">
                     <FaCoffee className='text-6xl'></FaCoffee>
                     </figure>
