@@ -14,6 +14,7 @@ import ErrorPage from './components/ErrorPage/ErrorPage.jsx';
 import AuthProvider from './AuthProvider/AuthProvider.jsx';
 import Blog from './components/Blog/Blog.jsx';
 import ChefDetails from './components/ChefDetails/ChefDetails.jsx';
+import AllChefInfo from './components/AllChefInfo/AllChefInfo.jsx';
 
 const router = createBrowserRouter([
   {
@@ -38,7 +39,11 @@ const router = createBrowserRouter([
         element: <Blog></Blog>
       },
       {
-        path: '/chefDetails/:id',
+        path: '/allChef',
+        element: <AllChefInfo></AllChefInfo>
+      },
+      {
+        path: '/allChef/:id',
         element: <ChefDetails></ChefDetails>
       }
     ]

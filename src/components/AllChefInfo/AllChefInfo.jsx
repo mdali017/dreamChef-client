@@ -18,7 +18,7 @@ const AllChefInfo = ({allChef}) => {
                         <p>Likes: {Likes}</p>
                     </div>
                     <div className="card-actions">
-                        <Link to={`/chefDeails/${id}`} className="btn btn-primary"> View Recipes Button</Link>
+                        <Link to={`/allChef/${id}`} className="btn btn-primary"> View Recipes Button</Link>
                     </div>
                 </div>
             </div>

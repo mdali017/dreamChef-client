@@ -6,7 +6,7 @@ const AllChef = () => {
 
 
     useEffect(() => {
-        fetch('http://localhost:5000/allChef')
+        fetch('https://dreamchefserver-mdali017.vercel.app/allChef')
             .then(res => res.json())
             .then(data => setAllChefData(data))
             .catch(error => {
