@@ -23,6 +23,7 @@ const Login = () => {
         .then(result => {
            const createdUser = result.user;
            console.log(createdUser);
+           reset();
         })
         .then(error => {
             console.log(error)

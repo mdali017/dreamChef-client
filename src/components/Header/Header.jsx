@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import {
   BoltIcon,
@@ -6,9 +6,66 @@ import {
   XMarkIcon,
 } from '@heroicons/react/24/solid'
 import { FaRebel } from 'react-icons/fa';
+import { AuthContext } from '../../AuthProvider/AuthProvider';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const {user, logOut} = useContext(AuthContext);
+
+  const handleLogOut = () => {
+
+    logOut()
+        .then(() => {
+
+        })
+        .catch(error => {
+            console.log(error)
+        })
+
+}
+
+  const navOptions = <>
+    <li>
+      <NavLink to='/' className={({ isActive }) => (isActive ? 'text-blue-800 font-semibold' : 'default')}>
+        Home
+      </NavLink>
+    </li>
+    <li>
+      <NavLink
+        to='/register'
+        className={({ isActive }) => (isActive ? 'text-blue-800 font-semibold' : 'default')}
+      >
+        Register
+      </NavLink>
+    </li>
+    {
+      user ? <>
+        <li>
+          <NavLink to='/login' onClick={handleLogOut}
+            className={({ isActive }) => (isActive ? 'text-blue-800 font-semibold' : 'default')}>
+            LogOut
+          </NavLink>
+        </li>
+      </>
+        : <>
+          <li>
+            <NavLink to='/login'
+              className={({ isActive }) => (isActive ? 'text-blue-800 font-semibold' : 'default')}>
+              Login
+            </NavLink>
+          </li>
+        </>
+    }
+    <li>
+      <NavLink
+        to='/blog'
+        className={({ isActive }) => (isActive ? 'text-blue-800 font-semibold' : 'default')}
+      >
+        Blog
+      </NavLink>
+    </li>
+  </>
+
   return (
     <div className='bg-gray-100 px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8'>
       <div className='relative flex items-center justify-between'>
@@ -20,35 +77,7 @@ const Header = () => {
 
         {/* Nav Items Section */}
         <ul className='items-center hidden space-x-8 lg:flex'>
-          <li>
-            <NavLink to='/' className={({ isActive }) => (isActive ? 'text-blue-800 font-semibold' : 'default')}>
-              Home
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to='/register'
-              className={({ isActive }) => (isActive ? 'text-blue-800 font-semibold' : 'default')}
-            >
-              Register
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to='/login'
-              className={({ isActive }) => (isActive ? 'text-blue-800 font-semibold' : 'default')}
-            >
-              Login
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to='/blog'
-              className={({ isActive }) => (isActive ? 'text-blue-800 font-semibold' : 'default')}
-            >
-              Blog
-            </NavLink>
-          </li>
+          {navOptions}
         </ul>
         {/* Mobile Navbar Section */}
         <div className='lg:hidden'>
@@ -85,43 +114,7 @@ const Header = () => {
                 {/* Mobile Nav Items Section */}
                 <nav>
                   <ul className='space-y-4'>
-                    <li>
-                      <NavLink to='/' className={({ isActive }) => (isActive ? 'text-blue-800 font-semibold' : 'default')}>
-                        Home
-                      </NavLink>
-                    </li>
-                    <li>
-                      <NavLink
-                        to='/register'
-                        className={({ isActive }) => (isActive ? 'text-blue-800 font-semibold' : 'default')}
-                      >
-                        Register
-                      </NavLink>
-                    </li>
-                    <li>
-                      <NavLink
-                        to='/login'
-                        className={({ isActive }) => (isActive ? 'text-blue-800 font-semibold' : 'default')}
-                      >
-                        Login
-                      </NavLink>
-                    </li>
-                    <li>
-                      <NavLink
-                        to='/blog'
-                        className={({ isActive }) => (isActive ? 'text-blue-800 font-semibold' : 'default')}
-                      >
-                        Blog
-                      </NavLink>
-                    </li>
-                    <li>
-                      <Link
-                        to='/about'
-                        className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-blue-400'
-                      >
-                        About Us
-                      </Link>
-                    </li>
+                    {navOptions}
                   </ul>
                 </nav>
               </div>
