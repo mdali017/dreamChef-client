@@ -15,6 +15,8 @@ import AuthProvider from './AuthProvider/AuthProvider.jsx';
 import Blog from './components/Blog/Blog.jsx';
 import ChefDetails from './components/ChefDetails/ChefDetails.jsx';
 import AllChefInfo from './components/AllChefInfo/AllChefInfo.jsx';
+import ChefRecipepage from './components/Chef Recipe page/ChefRecipepage.jsx';
+import PrivateRoute from './routes/PrivateRoute.jsx';
 
 const router = createBrowserRouter([
   {
@@ -25,6 +27,10 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>
+      },
+      {
+        path: 'allchefrecipe',
+        element: <PrivateRoute><ChefRecipepage></ChefRecipepage></PrivateRoute>
       },
       {
         path: '/register',

@@ -31,6 +31,11 @@ const Header = () => {
       </NavLink>
     </li>
     <li>
+      <NavLink to='/allchefrecipe' className={({ isActive }) => (isActive ? 'text-blue-800 font-semibold' : 'default')}>
+        Chef Recipe
+      </NavLink>
+    </li>
+    <li>
       <NavLink
         to='/register'
         className={({ isActive }) => (isActive ? 'text-blue-800 font-semibold' : 'default')}
